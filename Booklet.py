@@ -6,14 +6,14 @@ from argparse import ArgumentParser
 #Take args
 parser = ArgumentParser()
 parser.add_argument("pages", type=int, help="number of pages in book")
-parser.add_argument("-f","--format", type=str, choices = ["A4","A5","A6","A7","A8"], default = "A5", help="booklet format and size (default = A5)")
-parser.add_argument("-e","--empty_page_value", type=int, default = 1, help="page number, which will be printed instead of blank pages in the end of booklet (default = 1)")
-parser.add_argument("-m","--ms_office_limit", action='store_true', help="slice output to avoid limitation in MS Office products (255 chars) (default = false)")
+parser.add_argument("format", type=str, choices = ["A4","A5","A6","A7","A8"], help="booklet format and size")
+parser.add_argument("-e","--empty_page", type=int, default = 1, help="page number, which will be printed instead of blank pages in the end of booklet (default = 1)")
+parser.add_argument("-m","--ms_office_fix", action='store_true', help="slice output to avoid limitation in MS Office products (255 chars) (default = false)")
 args = parser.parse_args()
 PagesCount = args.pages
 Format = args.format
-EmptyPageValue = args.empty_page_value
-MSOfficeFix = args.ms_office_limit
+EmptyPageValue = args.empty_page
+MSOfficeFix = args.ms_office_fix
 
 #Some defaults
 MSOfficeMaxPages = 255
@@ -131,5 +131,5 @@ else:
 
 #Details
 print("\nEmpty pages: "+str(BlankPages)+" (Shown as: "+str(EmptyPageValue)+")")
-print("A4 lists: "+str(PagesCount//PagesOnList)+" ("+str(PagesOnList)+" pages on each dual-sided list)")
+print("A4 papers count: "+str(PagesCount//PagesOnList)+" ("+str(PagesOnList)+" pages on each dual-sided paper)")
 
