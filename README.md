@@ -1,19 +1,28 @@
-# Booklet-Print-Order
+# Booklet Print Order
 
 Script for counting booklet printing page ordering. Allows you to make dual-sided booklets in various formats, using basic A4 paper.
 
 ## Usage
 
-`Booklet.py [-h] [-e EMPTY_PAGE] [-m] pages {A4,A5,A6,A7,A8}`
+`Booklet.py [-p PARTS] [-e EMPTY] [-m] [-n] [-h] pages {A4,A5,A6,A7,A8}`
 
-- <u>**Positional arguments:**</u>
-	- **pages** number of pages in book
-	- **{A4,A5,A6,A7,A8}** booklet format and size
+- <u>**Positional Arguments:**</u>
+	- **pages** Number of pages in book.
+	- **{A4,A5,A6,A7,A8}** Booklet format and size.
 
-- <u>**Optional arguments:**</u>
-	- **-h, --help** show this help message and exit
-	- **-e EMPTY_PAGE, --empty_page EMPTY_PAGE** page number, which will be printed instead of blank pages in the end of booklet (default = 1)
-	- **-m, --ms_office_fix** slice output to avoid limitation in MS Office products (255 chars) (default = false)
+- <u>**Optional Arguments:**</u>
+	- **-p PARTS, --parts PARTS** Divide bookbind pages on equal parts.<br>
+	<u>WARNING</u>: Output may contain empty pages!<br>
+	(default = 1)
+	- **-e EMPTY_PAGE, --empty_page EMPTY_PAGE** Page number, which will be printed instead of blank pages in the end of booklet.<br>
+	<u>WARNING</u>: 0 value may be throwed while printing!<br>
+	(default = 1)
+	- **-m, --ms_office_fix** Slice output to avoid limitation in MS Office products (255 chars).<br>
+	(default = false)
+	- **-n, --no_buffer** Do not copy output to buffer.<br>
+	(default = false)
+	- **-h, --help** Show this help message and exit.<br>
+	(default = false)
 
 ## Examples
 
@@ -85,10 +94,11 @@ Output:<br>
 
 ### Booklet splited into 2 parts:
 
-`feature in progress`
+`Booklet 16 A5 -p 2`
 
 Output:<br>
-**feature in progress**
+**8,1,2,7,6,3,4,5**<br>
+**16,9,10,15,14,11,12,13**
 
 ![Dual](https://user-images.githubusercontent.com/20092823/86757656-972ef400-c043-11ea-86c9-e5f2861a9273.png)
 
@@ -96,10 +106,13 @@ Output:<br>
 
 ### Booklet splited into 4 parts:
 
-`feature in progress`
+`Booklet 16 A5 -p 4`
 
 Output:<br>
-**feature in progress**
+**4,1,2,3**<br>
+**8,5,6,7**<br>
+**12,9,10,11**<br>
+**16,13,14,15**
 
 ![Quad](https://user-images.githubusercontent.com/20092823/86757668-98602100-c043-11ea-9180-e63d22d51e45.png)
 
