@@ -1,6 +1,10 @@
-# Booklet Print Order
+# 📚 Booklet Print Order 🖨️
 
-Script for counting booklet printing page ordering. Allows you to make dual-sided booklets in various formats, using basic A4 paper.
+Script for counting booklet printing page ordering. Allows you to make dual-sided booklets in various formats, with basic A4 paper.
+
+## Installation
+
+`pip install -r requirements.txt`
 
 ## Usage
 
@@ -33,7 +37,7 @@ Script for counting booklet printing page ordering. Allows you to make dual-side
 Output:<br>
 **4,1,2,3**
 
-![A5](https://user-images.githubusercontent.com/20092823/86597228-bd00be00-bf9b-11ea-8956-038ecf41f156.png)
+![A5](Pictures/A5.png)
 
 ------
 
@@ -44,7 +48,7 @@ Output:<br>
 Output:<br>
 **8,1,6,3,2,7,4,5**
 
-![A6](https://user-images.githubusercontent.com/20092823/86597245-c12cdb80-bf9b-11ea-8d86-5951c2169fbc.png)
+![A6](Pictures/A6.png)
 
 ------
 
@@ -55,7 +59,7 @@ Output:<br>
 Output:<br>
 **16,1,14,3,12,5,10,7,4,13,2,15,8,9,6,11**
 
-![A7](https://user-images.githubusercontent.com/20092823/86597247-c1c57200-bf9b-11ea-9a6f-5d74d87078f5.png)
+![A7](Pictures/A7.png)
 
 ------
 
@@ -66,7 +70,7 @@ Output:<br>
 Output:<br>
 **32,1,30,3,28,5,26,7,24,9,22,11,20,13,18,15,4,29,2,31,8,25,6,27,12,21,10,23,16,17,14,19**
 
-![A8](https://user-images.githubusercontent.com/20092823/86597251-c1c57200-bf9b-11ea-9903-dbfbd8846395.png)
+![A8](Pictures/A8.png)
 
 ------
 
@@ -77,7 +81,7 @@ Output:<br>
 Output:<br>
 **0,1,0,3,2,0,4,5**
 
-![Blank](https://user-images.githubusercontent.com/20092823/86597266-c558f900-bf9b-11ea-966d-f2278ab7ab8c.png)
+![Blank](Pictures/Blank.png)
 
 ------
 
@@ -88,7 +92,7 @@ Output:<br>
 Output:<br>
 **16,1,2,15,14,3,4,13,12,5,6,11,10,7,8,9**
 
-![Simple](https://user-images.githubusercontent.com/20092823/86757672-98f8b780-c043-11ea-8944-2537e3d8ec54.png)
+![Simple](Pictures/Simple.png)
 
 ------
 
@@ -100,7 +104,7 @@ Output:<br>
 **8,1,2,7,6,3,4,5**<br>
 **16,9,10,15,14,11,12,13**
 
-![Dual](https://user-images.githubusercontent.com/20092823/86757656-972ef400-c043-11ea-86c9-e5f2861a9273.png)
+![Dual](Pictures/Dual.png)
 
 ------
 
@@ -114,7 +118,7 @@ Output:<br>
 **12,9,10,11**<br>
 **16,13,14,15**
 
-![Quad](https://user-images.githubusercontent.com/20092823/86757668-98602100-c043-11ea-9180-e63d22d51e45.png)
+![Quad](Pictures/Quad.png)
 
 ------
 
